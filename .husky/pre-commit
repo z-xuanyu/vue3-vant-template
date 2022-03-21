@@ -1,0 +1,13 @@
+###
+ # @Author: xuanyu
+ # @LastEditors: xuanyu
+ # @email: 969718197@qq.com
+ # @github: https://github.com/z-xuanyu
+ # @Date: 2022-03-21 15:09:02
+ # @LastEditTime: 2022-03-21 15:12:08
+ # @Description: Modify here please
+### 
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx lint-staged
