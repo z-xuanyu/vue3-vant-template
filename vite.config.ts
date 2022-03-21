@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-03-18 14:53:16
- * @LastEditTime: 2022-03-21 15:46:28
+ * @LastEditTime: 2022-03-21 16:48:58
  * @Description: vite 配置文件
  */
 import { defineConfig, loadEnv } from 'vite'
@@ -92,10 +92,16 @@ export default defineConfig(({ mode }: ConfigEnv) => {
           /\.md$/, // .md
         ],
         imports: ['vue', 'vue-router', 'pinia'],
+        dts: './src/auto-imports.d.ts',
         resolvers: [
           // vant 组件库
           VantResolver(),
         ],
+        eslintrc: {
+          enabled: false, // Default `false`
+          filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
+          globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
+        },
       }),
     ],
     // 代理

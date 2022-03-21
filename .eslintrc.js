@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-03-21 14:38:50
- * @LastEditTime: 2022-03-21 14:52:14
+ * @LastEditTime: 2022-03-21 16:24:39
  * @Description: Modify here please
  */
 const { defineConfig } = require('eslint-define-config')
@@ -34,10 +34,10 @@ module.exports = defineConfig({
     'plugin:@typescript-eslint/recommended', // typescript-eslint推荐规则,
     'prettier',
     'plugin:prettier/recommended',
+    './.eslintrc-auto-import.json',
   ],
   // https://cn.eslint.org/docs/rules/
   rules: {
-    'no-undef': 0, // 关闭未定义引入
     // 禁止使用 var
     'no-var': 'error',
     semi: 'off',

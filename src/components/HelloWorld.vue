@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-03-18 14:53:16
- * @LastEditTime: 2022-03-21 14:45:55
+ * @LastEditTime: 2022-03-21 16:50:44
  * @Description: Modify here please
 -->
 
@@ -18,8 +18,6 @@ export default defineComponent({
 withDefaults(defineProps<{ msg: string }>(), {
   msg: 'xuanyu',
 })
-
-const test = ref('你好')
 </script>
 
 <template>
@@ -27,7 +25,6 @@ const test = ref('你好')
     <VanButton v-bind="$attrs">{{ msg }}</VanButton>
     <IconMdiAirplaneSearch width="100" height="100" />
     <IconSvgDaKa />
-    {{ test }}
   </div>
 </template>
 
