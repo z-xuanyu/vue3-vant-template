@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-03-18 14:53:16
- * @LastEditTime: 2022-03-21 16:48:58
+ * @LastEditTime: 2022-04-19 10:15:40
  * @Description: vite 配置文件
  */
 import { defineConfig, loadEnv } from 'vite'
@@ -24,6 +24,8 @@ import { VantResolver } from 'unplugin-vue-components/resolvers'
 
 // 自然导入api
 import AutoImport from 'unplugin-auto-import/vite'
+
+import pxtoviewport from 'postcss-px-to-viewport'
 
 function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir)
@@ -117,7 +119,7 @@ export default defineConfig(({ mode }: ConfigEnv) => {
     css: {
       postcss: {
         plugins: [
-          require('postcss-px-to-viewport')({
+          pxtoviewport({
             unitToConvert: 'px', //需要转换的单位，默认为"px"
             viewportWidth: 375, // 视窗的宽度，对应的是我们设计稿的宽度
             // viewportHeight: 667, //视窗的高度，根据375设备的宽度来指定，一般指定667，也可以不配置

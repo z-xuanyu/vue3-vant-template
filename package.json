@@ -20,7 +20,8 @@
     "lint": "eslint src --fix --ext .js,.ts,.jsx,.tsx,.vue && prettier --write --ignore-unknown",
     "commit": "cz",
     "dev": "vite --host",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vue-tsc --noEmit && vite build --mode production",
+    "test": "vue-tsc --noEmit && vite --mode test",
     "preview": "vite preview",
     "prepare": "husky install"
   },
