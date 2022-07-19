@@ -453,10 +453,10 @@
   resolved "https://registry.npmmirror.com/@vant/use/-/use-1.4.1.tgz#22cdd81c6e2cf8dc746278608a3facbd4fdbcdc7"
   integrity sha512-YonNN0SuJLEJuqdoMcVAJm2JUZWkHNrW81QzeF6FLyG5HFUGlmTM5Sby7gdS3Z/8UDMlkWRQpJxBWbmVzmUWxQ==
 
-"@vitejs/plugin-vue@^2.2.0":
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-2.2.4.tgz#ab8b199ca82496b05d2654c5f34ffcf9b947243d"
-  integrity sha512-ev9AOlp0ljCaDkFZF3JwC/pD2N4Hh+r5srl5JHM6BKg5+99jiiK0rE/XaRs3pVm1wzyKkjUy/StBSoXX5fFzcw==
+"@vitejs/plugin-vue@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.npmmirror.com/@vitejs/plugin-vue/-/plugin-vue-3.0.1.tgz#b6af8f782485374bbb5fe09edf067a845bf4caae"
+  integrity sha512-Ll9JgxG7ONIz/XZv3dssfoMUDu9qAnlJ+km+pBA0teYSXzwPCIzS/e1bmwNYl5dcQGs677D21amgfYAnzMl17A==
 
 "@volar/code-gen@0.38.8":
   version "0.38.8"
