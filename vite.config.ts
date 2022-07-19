@@ -4,36 +4,35 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-03-18 14:53:16
- * @LastEditTime: 2022-04-19 10:15:40
+ * @LastEditTime: 2022-07-19 12:16:20
  * @Description: vite 配置文件
  */
-import { defineConfig, loadEnv } from 'vite'
-import type { ConfigEnv } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
-import Icons from 'unplugin-icons/vite'
-import styleImport, { VantResolve } from 'vite-plugin-style-import'
-import { FileSystemIconLoader } from 'unplugin-icons/loaders'
+import { defineConfig, loadEnv } from 'vite';
+import type { ConfigEnv } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import { resolve } from 'path';
+import Icons from 'unplugin-icons/vite';
+import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 // 引入 Icon自动引入解析器
-import IconsResolver from 'unplugin-icons/resolver'
+import IconsResolver from 'unplugin-icons/resolver';
 // 引入自动引入插件
-import Components from 'unplugin-vue-components/vite'
+import Components from 'unplugin-vue-components/vite';
 
 // vant 组件库 自动引入解析器
-import { VantResolver } from 'unplugin-vue-components/resolvers'
+import { VantResolver } from 'unplugin-vue-components/resolvers';
 
 // 自然导入api
-import AutoImport from 'unplugin-auto-import/vite'
+import AutoImport from 'unplugin-auto-import/vite';
 
-import pxtoviewport from 'postcss-px-to-viewport'
+import pxtoviewport from 'postcss-px-to-viewport';
 
 function pathResolve(dir: string) {
-  return resolve(process.cwd(), '.', dir)
+  return resolve(process.cwd(), '.', dir);
 }
 
 export default defineConfig(({ mode }: ConfigEnv) => {
   // 环境变量
-  const env = loadEnv(mode, process.cwd())
+  const env = loadEnv(mode, process.cwd());
   return {
     resolve: {
       alias: [
@@ -46,10 +45,6 @@ export default defineConfig(({ mode }: ConfigEnv) => {
     plugins: [
       // vue
       vue(),
-      // vant
-      styleImport({
-        resolves: [VantResolve()],
-      }),
       // 使用自动引入插件
       Components({
         // 配置解析器
@@ -139,5 +134,5 @@ export default defineConfig(({ mode }: ConfigEnv) => {
         ],
       },
     },
-  }
-})
+  };
+});
