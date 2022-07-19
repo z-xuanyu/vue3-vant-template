@@ -4,11 +4,11 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-03-21 11:28:07
- * @LastEditTime: 2022-03-21 11:46:21
+ * @LastEditTime: 2022-07-19 11:25:54
  * @Description: Modify here please
  */
-import { defineStore } from 'pinia'
-import { store } from '../index'
+import { defineStore } from 'pinia';
+import { store } from '../index';
 export const appStore = defineStore({
   id: 'app-setting',
   state: () => ({
@@ -17,17 +17,17 @@ export const appStore = defineStore({
 
   getters: {
     getMenuStatus(): boolean {
-      return this.isShowMenu
+      return this.isShowMenu;
     },
   },
 
   actions: {
     changeMenuStatus() {
-      this.isShowMenu = !this.isShowMenu
+      this.isShowMenu = !this.isShowMenu;
     },
   },
-})
+});
 
 export function useAppStoreWithOut() {
-  return appStore(store)
+  return appStore(store);
 }

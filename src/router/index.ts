@@ -4,11 +4,11 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-03-21 11:35:42
- * @LastEditTime: 2022-03-21 11:43:21
+ * @LastEditTime: 2022-07-19 11:25:29
  * @Description: Modify here please
  */
-import type { App } from 'vue'
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import type { App } from 'vue';
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -37,16 +37,16 @@ const routes: Array<RouteRecordRaw> = [
     name: 'NotFound',
     component: () => import('/@/components/Error.vue'),
   },
-]
+];
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
   scrollBehavior: () => {
-    0
+    0;
   },
-})
+});
 
 export function setupRouter(app: App) {
-  app.use(router)
+  app.use(router);
 }

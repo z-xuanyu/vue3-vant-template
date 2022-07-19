@@ -4,12 +4,12 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Error: typeof import('./src/components/Error.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    IconMdiAirplaneSearch: typeof import('~icons/mdi/airplane-search')['default']
-    IconSvgDaKa: typeof import('~icons/svg/da-ka')['default']
-    VanButton: typeof import('vant/es')['Button']
+    Error: typeof import('./src/components/Error.vue')['default'];
+    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default'];
+    IconMdiAirplaneSearch: typeof import('~icons/mdi/airplane-search')['default'];
+    IconSvgDaKa: typeof import('~icons/svg/da-ka')['default'];
+    VanButton: typeof import('vant/es')['Button'];
   }
 }
 
-export {}
+export {};

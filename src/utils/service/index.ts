@@ -4,19 +4,19 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2022-03-21 15:54:11
- * @LastEditTime: 2022-03-21 15:56:55
+ * @LastEditTime: 2022-07-19 11:26:24
  * @Description: Modify here please
  */
-import Request from './request'
+import Request from './request';
 
-import type { RequestConfig } from './request/types'
+import type { RequestConfig } from './request/types';
 interface YWZRequestConfig<T> extends RequestConfig {
-  data?: T
+  data?: T;
 }
 interface YWZResponse<T> {
-  statusCode: number
-  desc: string
-  result: T
+  statusCode: number;
+  desc: string;
+  result: T;
 }
 
 const request = new Request({
@@ -28,7 +28,7 @@ const request = new Request({
     // 响应拦截器
     responseInterceptors: result => result,
   },
-})
+});
 
 /**
  * @description: 函数的描述
@@ -38,19 +38,19 @@ const request = new Request({
  * @returns {Promise}
  */
 const ywzRequest = <D, T = any>(config: YWZRequestConfig<D>) => {
-  const { method = 'GET' } = config
+  const { method = 'GET' } = config;
   if (method === 'get' || method === 'GET') {
-    config.params = config.data
+    config.params = config.data;
   }
-  return request.request<YWZResponse<T>>(config)
-}
+  return request.request<YWZResponse<T>>(config);
+};
 // 取消请求
 export const cancelRequest = (url: string | string[]) => {
-  return request.cancelRequest(url)
-}
+  return request.cancelRequest(url);
+};
 // 取消全部请求
 export const cancelAllRequest = () => {
-  return request.cancelAllRequest()
-}
+  return request.cancelAllRequest();
+};
 
-export default ywzRequest
+export default ywzRequest;
